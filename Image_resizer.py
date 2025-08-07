@@ -7,7 +7,7 @@ destination=input("Enter the destination file name and its type (ex. resized_pix
 image = cv2.imread(source,cv2.IMREAD_UNCHANGED) # cv2.IMREAD_UNCHANGED will be useful if jpg
 if image.shape[0]==image.shape[1]:
     print(f"The height x width x channel is: {image.shape}") # channel is for color ex. RGB represented in number
-    scale_percentage=int(input("Enter the percentage to which you want to reduce: "))
+    scale_percentage=int(input("Enter the percentage to which you want to reduce/increase: "))
     new_height, new_width = (int(image.shape[0]*scale_percentage/100),int(image.shape[1]*scale_percentage/100))
 
     resized = cv2.resize(image, (new_height, new_width))
